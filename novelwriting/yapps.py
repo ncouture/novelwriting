@@ -774,9 +774,9 @@ class Scanner:
 	    if best_pat not in self.ignore:
                 #pdb.set_trace()
 		# Create a token with this data
-		token = (self.pos, self.pos+best_match.endpos, best_pat,
-			 self.input[self.pos:self.pos+best_match.endpos])
-		self.pos = self.pos + best_match.endpos
+		token = (self.pos, self.pos+best_match, best_pat,
+			 self.input[self.pos:self.pos+best_match])
+		self.pos = self.pos + best_match
 		# Only add this token if it's not in the list
 		# (to prevent looping)
 		if not self.tokens or token != self.tokens[-1]:
@@ -785,7 +785,7 @@ class Scanner:
 		return
 	    else:
 		# This token should be ignored ..
-		self.pos = self.pos + best_match.endpos
+		self.pos = self.pos + best_match
 
 class ParserDescScanner(Scanner):
     def __init__(self, str):
