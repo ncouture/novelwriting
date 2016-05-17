@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: Novelwriting
+Version: 0.4.1
+Summary: Rule-based text generation
+Home-page: http://unpythonic.net/jeff/novelwriting/
+Author: Jeff Epler
+Author-email: jepler@unpythonic.net
+License: GPL
+Description: 
+        Novelwriting randomly generates structured documents from a grammar.
+        It is inspired by the Dada Engine, but is written in and extensible
+        through Python.
+Platform: UNKNOWN
